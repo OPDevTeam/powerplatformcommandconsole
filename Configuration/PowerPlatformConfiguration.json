@@ -1,0 +1,52 @@
+{
+  "localBuildStrategyFolder": "D:\\CONNECT\\LocalBuildStrategies\\",
+  "batFolder": "C:\\DevTools\\PowerPlatformCommandConsole\\bat\\",
+  "partialEnvBatFile": "C:\\DevTools\\PowerPlatformCommandConsole\\bat\\pp_env_partial.bat",
+
+  "locations": [
+    {
+      "name": "DDrive",
+      "path": "D:\\CONNECT\\PowerPlatform\\",
+      "enabled" : true
+    },
+    {
+      "name": "EDrive",
+      "path": "E:\\CONNECT\\PowerPlatform\\",
+      "enabled" : true
+    },
+    {
+      "name": "FDrive",
+      "path": "F:\\CONNECT\\PowerPlatform\\",
+      "enabled" : true
+    }
+
+  ],
+
+  "commands": [
+    {
+      "name": "update",
+      "label": "update %PP_VER% to %PP_UPD_VER%",
+      "cmd": "update",
+      "iconname": ""
+    },
+    {
+      "name": "pull",
+      "label": "Pull %PP_BDF%",
+      "cmd": "dopull",
+      "iconname": "Pull.ico"
+    },
+    {
+      "name": "build",
+      "label": "Build %PP_VER%",
+      "cmd": "bb b",
+      "iconname": "Build.ico"
+    },
+    {
+      "name": "savelkgs",
+      "label": "Save LKGs %PP_VER%",
+      "cmd": "savelkgs",
+      "iconname": "savelkgs.ico"
+    }
+  ]
+}
+
