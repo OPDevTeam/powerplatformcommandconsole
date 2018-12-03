@@ -25,7 +25,7 @@ set TMPOUTFOLDER=out-%RANDOM%
 
 rem delete out folder (which contains LKGs as well)
 if exist %OutFolder% (
-    echo renaming and deleting out folder %OutFolder
+    echo renaming and deleting out folder %OutFolder%
     
     pushd %PP_UPD_VER%
 
