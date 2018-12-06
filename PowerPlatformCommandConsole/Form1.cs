@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace PowerPlatformCommandConsole
     public partial class Form1 : Form
     {
         public Configuration Configuration { get; set; }
+
 
         public Form1 ()
         {
@@ -246,5 +248,14 @@ namespace PowerPlatformCommandConsole
             IList<string> ppDirs = Utilities.Instance.FindPowerPlatformFolders(sourceTree.Path, sourceTree.EnvBatFileName);
 
         }
+
+        private async void FetchVersionsButton_Click (object sender, EventArgs e)
+        {
+            IList<string> releases = new List<string>(new string[] { "10" });
+            IList<string> majorVersions = new List<string>(new string[] { "12", "11" });
+
+            IList<string> ppVersions = await BDFUtilities.GetPowerPlatformVersions(releases, majorVersions);
+        }
+
     }
 }

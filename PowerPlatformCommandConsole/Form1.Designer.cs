@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SaveLKGsButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.FetchVersionsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LocationsComboBox
@@ -164,11 +165,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // FetchVersionsButton
+            // 
+            this.FetchVersionsButton.Location = new System.Drawing.Point(425, 284);
+            this.FetchVersionsButton.Name = "FetchVersionsButton";
+            this.FetchVersionsButton.Size = new System.Drawing.Size(75, 23);
+            this.FetchVersionsButton.TabIndex = 12;
+            this.FetchVersionsButton.Text = "New...";
+            this.FetchVersionsButton.UseVisualStyleBackColor = true;
+            this.FetchVersionsButton.Click += new System.EventHandler(this.FetchVersionsButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.FetchVersionsButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.SaveLKGsButton);
             this.Controls.Add(this.label3);
@@ -204,6 +216,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button SaveLKGsButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button FetchVersionsButton;
     }
 }
 
