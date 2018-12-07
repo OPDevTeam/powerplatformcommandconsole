@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="LastUsedLocation" Type="System.String" Scope="User">
-      <Value Profile="(Default)">EDrive</Value>
+      <Value Profile="(Default)">FDrive</Value>
     </Setting>
     <Setting Name="LastUsedPPVer" Type="System.String" Scope="User">
       <Value Profile="(Default)">10.12.0.20</Value>

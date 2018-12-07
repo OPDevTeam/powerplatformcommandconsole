@@ -39,11 +39,12 @@
             this.UpdateToPPVerTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.SaveLKGsButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LocalPPVersButton = new System.Windows.Forms.Button();
             this.FetchVersionsButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.PPVerRegexTextBox = new System.Windows.Forms.TextBox();
-            this.PPVerListBox = new System.Windows.Forms.ListBox();
+            this.PPRemoteVersionsListBox = new System.Windows.Forms.ListBox();
+            this.PPVerLocalVersionsListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // LocationsComboBox
@@ -158,23 +159,23 @@
             this.SaveLKGsButton.UseVisualStyleBackColor = true;
             this.SaveLKGsButton.Click += new System.EventHandler(this.SaveLKGsButton_Click);
             // 
-            // button1
+            // LocalPPVersButton
             // 
-            this.button1.Location = new System.Drawing.Point(654, 398);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.LocalPPVersButton.Location = new System.Drawing.Point(12, 342);
+            this.LocalPPVersButton.Name = "LocalPPVersButton";
+            this.LocalPPVersButton.Size = new System.Drawing.Size(117, 23);
+            this.LocalPPVersButton.TabIndex = 11;
+            this.LocalPPVersButton.Text = "Get Local PP Versions";
+            this.LocalPPVersButton.UseVisualStyleBackColor = true;
+            this.LocalPPVersButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // FetchVersionsButton
             // 
-            this.FetchVersionsButton.Location = new System.Drawing.Point(197, 209);
+            this.FetchVersionsButton.Location = new System.Drawing.Point(17, 536);
             this.FetchVersionsButton.Name = "FetchVersionsButton";
-            this.FetchVersionsButton.Size = new System.Drawing.Size(75, 23);
+            this.FetchVersionsButton.Size = new System.Drawing.Size(134, 23);
             this.FetchVersionsButton.TabIndex = 12;
-            this.FetchVersionsButton.Text = "New...";
+            this.FetchVersionsButton.Text = "Get PP Vers from BDF";
             this.FetchVersionsButton.UseVisualStyleBackColor = true;
             this.FetchVersionsButton.Click += new System.EventHandler(this.FetchVersionsButton_Click);
             // 
@@ -182,7 +183,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(189, 155);
+            this.label4.Location = new System.Drawing.Point(9, 482);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 16);
             this.label4.TabIndex = 14;
@@ -191,29 +192,38 @@
             // PPVerRegexTextBox
             // 
             this.PPVerRegexTextBox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PPVerRegexTextBox.Location = new System.Drawing.Point(192, 174);
+            this.PPVerRegexTextBox.Location = new System.Drawing.Point(12, 501);
             this.PPVerRegexTextBox.Name = "PPVerRegexTextBox";
             this.PPVerRegexTextBox.Size = new System.Drawing.Size(537, 26);
             this.PPVerRegexTextBox.TabIndex = 13;
             // 
-            // PPVerListBox
+            // PPRemoteVersionsListBox
             // 
-            this.PPVerListBox.FormattingEnabled = true;
-            this.PPVerListBox.Location = new System.Drawing.Point(294, 209);
-            this.PPVerListBox.Name = "PPVerListBox";
-            this.PPVerListBox.Size = new System.Drawing.Size(175, 212);
-            this.PPVerListBox.TabIndex = 15;
+            this.PPRemoteVersionsListBox.FormattingEnabled = true;
+            this.PPRemoteVersionsListBox.Location = new System.Drawing.Point(183, 532);
+            this.PPRemoteVersionsListBox.Name = "PPRemoteVersionsListBox";
+            this.PPRemoteVersionsListBox.Size = new System.Drawing.Size(175, 134);
+            this.PPRemoteVersionsListBox.TabIndex = 15;
+            // 
+            // PPVerLocalVersionsListBox
+            // 
+            this.PPVerLocalVersionsListBox.FormattingEnabled = true;
+            this.PPVerLocalVersionsListBox.Location = new System.Drawing.Point(173, 342);
+            this.PPVerLocalVersionsListBox.Name = "PPVerLocalVersionsListBox";
+            this.PPVerLocalVersionsListBox.Size = new System.Drawing.Size(175, 134);
+            this.PPVerLocalVersionsListBox.TabIndex = 16;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.PPVerListBox);
+            this.ClientSize = new System.Drawing.Size(800, 685);
+            this.Controls.Add(this.PPVerLocalVersionsListBox);
+            this.Controls.Add(this.PPRemoteVersionsListBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.PPVerRegexTextBox);
             this.Controls.Add(this.FetchVersionsButton);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LocalPPVersButton);
             this.Controls.Add(this.SaveLKGsButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.UpdateToPPVerTextBox);
@@ -247,11 +257,12 @@
         private System.Windows.Forms.TextBox UpdateToPPVerTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button SaveLKGsButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LocalPPVersButton;
         private System.Windows.Forms.Button FetchVersionsButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox PPVerRegexTextBox;
-        private System.Windows.Forms.ListBox PPVerListBox;
+        private System.Windows.Forms.ListBox PPRemoteVersionsListBox;
+        private System.Windows.Forms.ListBox PPVerLocalVersionsListBox;
     }
 }
 

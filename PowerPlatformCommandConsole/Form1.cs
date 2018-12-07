@@ -249,6 +249,9 @@ namespace PowerPlatformCommandConsole
 
             IList<string> ppDirs = Utilities.Instance.FindPowerPlatformFolders(sourceTree.Path, sourceTree.EnvBatFileName);
 
+             this.PPVerLocalVersionsListBox.Items.Clear();
+             foreach(string ppVer in ppDirs)
+                this.PPVerLocalVersionsListBox.Items.Add(ppVer);
         }
 
         private async void FetchVersionsButton_Click (object sender, EventArgs e)
@@ -262,9 +265,9 @@ namespace PowerPlatformCommandConsole
 
              IList<string> ppVersions = await BDFUtilities.GetPowerPlatformVersions(regExPattern);
 
-             this.PPVerListBox.Items.Clear();
+             this.PPRemoteVersionsListBox.Items.Clear();
              foreach(string ppVer in ppVersions)
-                this.PPVerListBox.Items.Add(ppVer);
+                this.PPRemoteVersionsListBox.Items.Add(ppVer);
         }
     }
 }
