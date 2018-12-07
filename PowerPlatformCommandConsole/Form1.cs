@@ -232,14 +232,6 @@ namespace PowerPlatformCommandConsole
 
         }
 
-        private void button1_Click (object sender, EventArgs e)
-        {
-            SourceTree sourceTree = GetSourceTree();
-            if(sourceTree == null)
-                return;
-
-            IList<string> ppDirs = Utilities.Instance.FindPowerPlatformFolders(sourceTree.Path, sourceTree.EnvBatFileName);
-        }
 
         private void LocationsComboBox_SelectedIndexChanged (object sender, EventArgs e)
         {
@@ -261,7 +253,7 @@ namespace PowerPlatformCommandConsole
 
             //IList<string> ppVersions = await BDFUtilities.GetPowerPlatformVersions(releases, majorVersions);
 
-            string regExPattern = this.PPVerRegexTextBox.Text; // @"10.12.0.([2-9][6-9]|[3-9][0-9])|10.11.0.([3-9][6-9]|[4-9][0-9])";
+            string regExPattern = this.PPVerRegexTextBox.Text; // @"10.12.0.([2][7-9]|[3-9][0-9])|10.11.0.([3][6-9]|[4-9][0-9])";
 
              IList<string> ppVersions = await BDFUtilities.GetPowerPlatformVersions(regExPattern);
 

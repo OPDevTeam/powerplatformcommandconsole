@@ -39,7 +39,6 @@
             this.UpdateToPPVerTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.SaveLKGsButton = new System.Windows.Forms.Button();
-            this.LocalPPVersButton = new System.Windows.Forms.Button();
             this.FetchVersionsButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.PPVerRegexTextBox = new System.Windows.Forms.TextBox();
@@ -71,7 +70,7 @@
             // PPVerTextBox
             // 
             this.PPVerTextBox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PPVerTextBox.Location = new System.Drawing.Point(12, 110);
+            this.PPVerTextBox.Location = new System.Drawing.Point(12, 197);
             this.PPVerTextBox.Name = "PPVerTextBox";
             this.PPVerTextBox.Size = new System.Drawing.Size(244, 26);
             this.PPVerTextBox.TabIndex = 2;
@@ -80,7 +79,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 91);
+            this.label2.Location = new System.Drawing.Point(13, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 3;
@@ -89,7 +88,7 @@
             // BootstrapButton
             // 
             this.BootstrapButton.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BootstrapButton.Location = new System.Drawing.Point(16, 176);
+            this.BootstrapButton.Location = new System.Drawing.Point(16, 263);
             this.BootstrapButton.Name = "BootstrapButton";
             this.BootstrapButton.Size = new System.Drawing.Size(117, 23);
             this.BootstrapButton.TabIndex = 4;
@@ -100,7 +99,7 @@
             // PullButton
             // 
             this.PullButton.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PullButton.Location = new System.Drawing.Point(16, 205);
+            this.PullButton.Location = new System.Drawing.Point(16, 292);
             this.PullButton.Name = "PullButton";
             this.PullButton.Size = new System.Drawing.Size(117, 23);
             this.PullButton.TabIndex = 5;
@@ -111,7 +110,7 @@
             // BuildButton
             // 
             this.BuildButton.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuildButton.Location = new System.Drawing.Point(16, 234);
+            this.BuildButton.Location = new System.Drawing.Point(16, 321);
             this.BuildButton.Name = "BuildButton";
             this.BuildButton.Size = new System.Drawing.Size(117, 23);
             this.BuildButton.TabIndex = 6;
@@ -122,7 +121,7 @@
             // UpdateButton
             // 
             this.UpdateButton.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateButton.Location = new System.Drawing.Point(612, 112);
+            this.UpdateButton.Location = new System.Drawing.Point(612, 199);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(117, 23);
             this.UpdateButton.TabIndex = 7;
@@ -133,7 +132,7 @@
             // UpdateToPPVerTextBox
             // 
             this.UpdateToPPVerTextBox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateToPPVerTextBox.Location = new System.Drawing.Point(294, 110);
+            this.UpdateToPPVerTextBox.Location = new System.Drawing.Point(294, 197);
             this.UpdateToPPVerTextBox.Name = "UpdateToPPVerTextBox";
             this.UpdateToPPVerTextBox.Size = new System.Drawing.Size(244, 26);
             this.UpdateToPPVerTextBox.TabIndex = 8;
@@ -142,7 +141,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(300, 91);
+            this.label3.Location = new System.Drawing.Point(300, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 16);
             this.label3.TabIndex = 9;
@@ -151,7 +150,7 @@
             // SaveLKGsButton
             // 
             this.SaveLKGsButton.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveLKGsButton.Location = new System.Drawing.Point(16, 263);
+            this.SaveLKGsButton.Location = new System.Drawing.Point(16, 350);
             this.SaveLKGsButton.Name = "SaveLKGsButton";
             this.SaveLKGsButton.Size = new System.Drawing.Size(117, 23);
             this.SaveLKGsButton.TabIndex = 10;
@@ -159,19 +158,9 @@
             this.SaveLKGsButton.UseVisualStyleBackColor = true;
             this.SaveLKGsButton.Click += new System.EventHandler(this.SaveLKGsButton_Click);
             // 
-            // LocalPPVersButton
-            // 
-            this.LocalPPVersButton.Location = new System.Drawing.Point(12, 342);
-            this.LocalPPVersButton.Name = "LocalPPVersButton";
-            this.LocalPPVersButton.Size = new System.Drawing.Size(117, 23);
-            this.LocalPPVersButton.TabIndex = 11;
-            this.LocalPPVersButton.Text = "Get Local PP Versions";
-            this.LocalPPVersButton.UseVisualStyleBackColor = true;
-            this.LocalPPVersButton.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FetchVersionsButton
             // 
-            this.FetchVersionsButton.Location = new System.Drawing.Point(17, 536);
+            this.FetchVersionsButton.Location = new System.Drawing.Point(17, 487);
             this.FetchVersionsButton.Name = "FetchVersionsButton";
             this.FetchVersionsButton.Size = new System.Drawing.Size(134, 23);
             this.FetchVersionsButton.TabIndex = 12;
@@ -183,7 +172,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 482);
+            this.label4.Location = new System.Drawing.Point(9, 433);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 16);
             this.label4.TabIndex = 14;
@@ -192,7 +181,7 @@
             // PPVerRegexTextBox
             // 
             this.PPVerRegexTextBox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PPVerRegexTextBox.Location = new System.Drawing.Point(12, 501);
+            this.PPVerRegexTextBox.Location = new System.Drawing.Point(12, 452);
             this.PPVerRegexTextBox.Name = "PPVerRegexTextBox";
             this.PPVerRegexTextBox.Size = new System.Drawing.Size(537, 26);
             this.PPVerRegexTextBox.TabIndex = 13;
@@ -200,15 +189,15 @@
             // PPRemoteVersionsListBox
             // 
             this.PPRemoteVersionsListBox.FormattingEnabled = true;
-            this.PPRemoteVersionsListBox.Location = new System.Drawing.Point(183, 532);
+            this.PPRemoteVersionsListBox.Location = new System.Drawing.Point(183, 483);
             this.PPRemoteVersionsListBox.Name = "PPRemoteVersionsListBox";
-            this.PPRemoteVersionsListBox.Size = new System.Drawing.Size(175, 134);
+            this.PPRemoteVersionsListBox.Size = new System.Drawing.Size(175, 173);
             this.PPRemoteVersionsListBox.TabIndex = 15;
             // 
             // PPVerLocalVersionsListBox
             // 
             this.PPVerLocalVersionsListBox.FormattingEnabled = true;
-            this.PPVerLocalVersionsListBox.Location = new System.Drawing.Point(173, 342);
+            this.PPVerLocalVersionsListBox.Location = new System.Drawing.Point(336, 12);
             this.PPVerLocalVersionsListBox.Name = "PPVerLocalVersionsListBox";
             this.PPVerLocalVersionsListBox.Size = new System.Drawing.Size(175, 134);
             this.PPVerLocalVersionsListBox.TabIndex = 16;
@@ -223,7 +212,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.PPVerRegexTextBox);
             this.Controls.Add(this.FetchVersionsButton);
-            this.Controls.Add(this.LocalPPVersButton);
             this.Controls.Add(this.SaveLKGsButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.UpdateToPPVerTextBox);
@@ -257,7 +245,6 @@
         private System.Windows.Forms.TextBox UpdateToPPVerTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button SaveLKGsButton;
-        private System.Windows.Forms.Button LocalPPVersButton;
         private System.Windows.Forms.Button FetchVersionsButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox PPVerRegexTextBox;
