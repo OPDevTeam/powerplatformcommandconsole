@@ -5,6 +5,7 @@ using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
+using System.Text.RegularExpressions;
 
 namespace PowerPlatformCommandConsole
 {
@@ -24,6 +25,27 @@ namespace PowerPlatformCommandConsole
 
         public BDFUtilities()
         {
+        }
+
+
+        public  static async Task<IList<string>> GetPowerPlatformVersions(string regExPattern)
+        {
+            PowerPlatformVersions ppVersionsFromBDF = await GetPowerPlatformVersionsFromBDFServer();
+            if(ppVersionsFromBDF == null)
+                return null;
+
+            Regex regEx = null;
+            if(!String.IsNullOrEmpty(regExPattern))
+                regEx = new Regex(regExPattern);
+            
+            IList<string> ppVersions = new List<string>();
+            foreach (ProductVersion ver in ppVersionsFromBDF.PowerPlatform)
+            {
+                if((regEx == null) || regEx.IsMatch(ver.Ver))
+                    ppVersions.Add(ver.Ver);
+            }
+
+            return ppVersions;
         }
 
         public  static async Task<IList<string>> GetPowerPlatformVersions(IList<string> releases, IList<string> majorVersions)

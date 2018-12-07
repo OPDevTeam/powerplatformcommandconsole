@@ -68,6 +68,8 @@ namespace PowerPlatformCommandConsole
                 lastUsedPPVer = "10.12.0.20";
             this.PPVerTextBox.Text = lastUsedPPVer;
 
+            this.PPVerRegexTextBox.Text = Configuration.PPVerRegex;
+
             PopulateLocationsComboBox();
 
         }
@@ -251,11 +253,18 @@ namespace PowerPlatformCommandConsole
 
         private async void FetchVersionsButton_Click (object sender, EventArgs e)
         {
-            IList<string> releases = new List<string>(new string[] { "10" });
-            IList<string> majorVersions = new List<string>(new string[] { "12", "11" });
+            //IList<string> releases = new List<string>(new string[] { "10" });
+            //IList<string> majorVersions = new List<string>(new string[] { "12", "11" });
 
-            IList<string> ppVersions = await BDFUtilities.GetPowerPlatformVersions(releases, majorVersions);
+            //IList<string> ppVersions = await BDFUtilities.GetPowerPlatformVersions(releases, majorVersions);
+
+            string regExPattern = this.PPVerRegexTextBox.Text; // @"10.12.0.([2-9][6-9]|[3-9][0-9])|10.11.0.([3-9][6-9]|[4-9][0-9])";
+
+             IList<string> ppVersions = await BDFUtilities.GetPowerPlatformVersions(regExPattern);
+
+             this.PPVerListBox.Items.Clear();
+             foreach(string ppVer in ppVersions)
+                this.PPVerListBox.Items.Add(ppVer);
         }
-
     }
 }

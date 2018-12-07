@@ -2,7 +2,8 @@
   "localBuildStrategyFolder": "D:\\CONNECT\\LocalBuildStrategies\\",
   "batFolder": "C:\\DevTools\\PowerPlatformCommandConsole\\bat\\",
   "partialEnvBatFile": "C:\\DevTools\\PowerPlatformCommandConsole\\bat\\pp_env_partial.bat",
-
+  "PPVerRegex": "10.12.0.([2-9][7-9]|[3-9][0-9])|10.11.0.([3-9][6-9]|[4-9][0-9])",  //10.12.0.27+ or 10.11.0.36+
+   
   "locations": [
     {
       "name": "DDrive",

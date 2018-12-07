@@ -39,6 +39,7 @@ namespace PowerPlatformCommandConsole
         public string BatFolder { get; set; }
         public string PartialEnvBatFile { get; set; }
         public bool ConfirmCommand { get; set; } = false;
+        public string PPVerRegex { get; set; }
 
         public IList<Location> Locations { get; set; }
         public IList<Command> Commands { get; set; }
