@@ -36,7 +36,7 @@
             this.PullButton = new System.Windows.Forms.Button();
             this.BuildButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
-            this.UpdateToPPVerTextBox = new System.Windows.Forms.TextBox();
+            this.UpdateFromPPVerTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.SaveLKGsButton = new System.Windows.Forms.Button();
             this.FetchVersionsButton = new System.Windows.Forms.Button();
@@ -129,13 +129,13 @@
             this.UpdateButton.UseVisualStyleBackColor = true;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
-            // UpdateToPPVerTextBox
+            // UpdateFromPPVerTextBox
             // 
-            this.UpdateToPPVerTextBox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateToPPVerTextBox.Location = new System.Drawing.Point(294, 197);
-            this.UpdateToPPVerTextBox.Name = "UpdateToPPVerTextBox";
-            this.UpdateToPPVerTextBox.Size = new System.Drawing.Size(244, 26);
-            this.UpdateToPPVerTextBox.TabIndex = 8;
+            this.UpdateFromPPVerTextBox.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateFromPPVerTextBox.Location = new System.Drawing.Point(294, 197);
+            this.UpdateFromPPVerTextBox.Name = "UpdateFromPPVerTextBox";
+            this.UpdateFromPPVerTextBox.Size = new System.Drawing.Size(244, 26);
+            this.UpdateFromPPVerTextBox.TabIndex = 8;
             // 
             // label3
             // 
@@ -143,9 +143,9 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(300, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 16);
+            this.label3.Size = new System.Drawing.Size(134, 16);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Update To Version:";
+            this.label3.Text = "Update From Version:";
             // 
             // SaveLKGsButton
             // 
@@ -214,7 +214,7 @@
             this.Controls.Add(this.FetchVersionsButton);
             this.Controls.Add(this.SaveLKGsButton);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.UpdateToPPVerTextBox);
+            this.Controls.Add(this.UpdateFromPPVerTextBox);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.BuildButton);
             this.Controls.Add(this.PullButton);
@@ -242,7 +242,7 @@
         private System.Windows.Forms.Button PullButton;
         private System.Windows.Forms.Button BuildButton;
         private System.Windows.Forms.Button UpdateButton;
-        private System.Windows.Forms.TextBox UpdateToPPVerTextBox;
+        private System.Windows.Forms.TextBox UpdateFromPPVerTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button SaveLKGsButton;
         private System.Windows.Forms.Button FetchVersionsButton;

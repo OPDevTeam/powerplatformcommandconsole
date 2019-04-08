@@ -52,11 +52,11 @@ namespace PowerPlatformCommandConsole
             }
         }
 
-        private string UpdateVersion
+        private string UpdateFromVersion
         {
             get
             {
-                return (string)this.UpdateToPPVerTextBox.Text;
+                return (string)this.UpdateFromPPVerTextBox.Text;
                     
             }
         }
@@ -98,7 +98,7 @@ namespace PowerPlatformCommandConsole
 
         private SourceTree GetSourceTree()
         {
-            return new SourceTree(SelectedLocation.Path, Version, UpdateVersion, Configuration);
+            return new SourceTree(SelectedLocation.Path, Version, UpdateFromVersion, Configuration);
         }
 
         private void ExecuteCommand(Command cmd, string startFolder)

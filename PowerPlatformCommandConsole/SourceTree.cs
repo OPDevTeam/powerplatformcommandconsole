@@ -10,7 +10,7 @@ namespace PowerPlatformCommandConsole
     {
         public string Path { get; set; }
         public string Version { get; set; }
-        public string UpdateVersion { get; set; }
+        public string UpdateFromVersion { get; set; }
         public Configuration Configuration { get; set; }
 
         public string SourceFolderName { get; set; } = "src";
@@ -37,7 +37,7 @@ namespace PowerPlatformCommandConsole
 
 
 
-        public SourceTree(string path, string version, string updateVersion, Configuration cfg)
+        public SourceTree(string path, string version, string updateFromVersion, Configuration cfg)
         {
             if(String.IsNullOrEmpty(path))
                 return;
@@ -50,7 +50,7 @@ namespace PowerPlatformCommandConsole
 
             Path = path;
             Version = version;
-            UpdateVersion = updateVersion;
+            UpdateFromVersion = updateFromVersion;
             Configuration = cfg;
 
             CreateEnvBatFile();
@@ -85,7 +85,7 @@ namespace PowerPlatformCommandConsole
             // Add the stream and application specific variables
             cmdFileContents.Add("@echo off");
             cmdFileContents.Add(String.Format("set PP_VER={0}", Version));
-            cmdFileContents.Add(String.Format("set PP_UPD_VER={0}", UpdateVersion));
+            cmdFileContents.Add(String.Format("set PP_UPD_FROM_VER={0}", UpdateFromVersion));
             cmdFileContents.Add(String.Format("set PP_DIR={0}", Path));
             cmdFileContents.Add(String.Format("set PP_BDF=bdfserver:PowerPlatform:{0}", Version));
             cmdFileContents.Add(String.Format("set PP_LocalBuildStrategyFolder={0}", Configuration.LocalBuildStrategyFolder));
